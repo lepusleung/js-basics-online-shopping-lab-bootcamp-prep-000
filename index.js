@@ -21,10 +21,10 @@ function viewCart() {
       console.log("Your shopping cart is empty.");
     } else {
       var newArr = [];
-      
+
       for (var i = 0; i < cart.length; i++) {
         var price = Object.keys(cart[i]);
-        
+
         for (var price in cart[i]) {
           newArr.push(`${Object.keys(cart[i])} at $${cart[i][price]}`);
         }
@@ -36,7 +36,7 @@ function total() {
   let ttl = 0;
 
   for (var i = 0; i < cart.length; i++) {
-    
+
     for (var item in cart[i]) {
       ttl += cart[i][item];
     }
